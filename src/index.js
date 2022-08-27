@@ -1,1 +1,2 @@
-console.log('Webpack')
+import './sass/index.scss';
+
