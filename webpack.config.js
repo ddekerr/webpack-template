@@ -4,6 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
+  devServer: {
+    port: 4444,
+    open: true,
+  },
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
@@ -26,10 +30,5 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    }),
-  ],
+  }
 };
